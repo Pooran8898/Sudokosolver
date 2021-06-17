@@ -1,0 +1,72 @@
+.MainDataDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.SudokoDataDiv {
+  flex-basis: 60%;
+  display: flex;
+}
+.Sudoko {
+  flex-basis: 80%;
+  margin: auto;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  border: 10px solid #c2deff;
+}
+
+.FirstSudokoDiv {
+  flex-basis: 33.3%;
+  display: flex;
+  flex-direction: row;
+}
+
+.SecondSudokoDiv {
+  flex-basis: 33.3%;
+  border: 6px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.ThirdSudokoDiv {
+  flex-basis: 33.3%;
+  display: flex;
+  flex-direction: row;
+}
+.FourthSudokoDiv {
+  /* border: 1px solid #444444; */
+  margin: 1%;
+  /*background-color: rgb(245, 175, 186); */
+  background-color: #eaeef4;
+  flex-basis: 31%;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 3vw;
+  font-weight: bold;
+}
+.InputDataDiv {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.TakeInputDiv {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.TakeInputDiv > div:nth-child(1) {
+  flex-basis: 33%;
+}
+.TakeInputDiv > div:nth-child(2) {
+  flex-basis: 67%;
+}
+
+.ButtonDiv {
+  flex-basis: 40%;
+}
