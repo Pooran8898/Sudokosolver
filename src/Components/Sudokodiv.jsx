@@ -1,4 +1,4 @@
-import { Button, TextareaAutosize, TextField } from "@material-ui/core";
+import { Button, Select, TextareaAutosize, TextField } from "@material-ui/core";
 import { SendIcon } from "@material-ui/icons";
 import React from "react";
 import styles from "./Sudokodiv.module.css";
@@ -92,6 +92,10 @@ export const Sudokodiv = () => {
   const Sudokosolve = (arr, i, j) => {
     Mainfunction(arr, i, j);
   };
+  const handlereset = ()=>{
+     setinputarr(FilterSudoko(dummyarr));
+     setsudokoarr(dummyarr);
+  }
   const SudokoCheck = (arr, i, j, check) => {
     if (j > 8 || i > 8) {
       if (i === 8 && j > 8) {
@@ -949,7 +953,7 @@ export const Sudokodiv = () => {
           </div>
           <div className={styles.ButtonDiv}>
             <Button
-              style={{ marginTop: "5px", marginLeft: "7%" }}
+              style={{ marginTop: "5px", marginLeft: "1%" }}
               color="primary"
               variant="contained"
               onClick={() => handlesubmit()}
@@ -957,12 +961,20 @@ export const Sudokodiv = () => {
               Submit
             </Button>
             <Button
-              style={{ marginLeft: "3%", marginTop: "5px" }}
+              style={{ marginLeft: "1%", marginTop: "5px" }}
               color="primary"
               variant="contained"
               onClick={() => Sudokosolve(sudokoarr, 0, 0)}
             >
               Solve
+            </Button>
+            <Button
+              style={{ marginLeft: "1%", marginTop: "5px" }}
+              color="primary"
+              variant="contained"
+              onClick={() => handlereset()}
+            >
+              Reset
             </Button>
           </div>
         </div>
